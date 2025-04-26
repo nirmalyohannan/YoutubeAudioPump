@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YTMP3</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Youtube to Mp3</h1>
+        <p>Submit URLs or YouTube Playlist</p>
+    </header>
+    
+    <main>
+        <div class="tabs">
+            <button class="tab-button active" data-tab="single-url">Single URL</button>
+            <button class="tab-button" data-tab="multi-url">URL List</button>
+            <button class="tab-button" data-tab="youtube-playlist">YouTube Playlist</button>
+        </div>
+
+        <section id="single-url" class="tab-content active">
+            <h2>Submit a Single URL</h2>
+            <input type="url" id="single-url-input" placeholder="Enter a single URL" />
+            <button id="submit-single-url">Submit</button>
+        </section>
+
+        <section id="multi-url" class="tab-content">
+            <h2>Submit Multiple URLs</h2>
+            <textarea id="multi-urls" placeholder="Enter URLs separated by commas" rows="5"></textarea>
+            <button id="submit-multi-url">Submit</button>
+        </section>
+
+        <section id="youtube-playlist" class="tab-content">
+            <h2>Submit YouTube Playlist</h2>
+            <input type="text" id="youtube-playlist-input" placeholder="Enter YouTube Playlist URL" />
+            <button id="submit-playlist">Submit</button>
+        </section>
+        <!-- Add vertical spacing -->
+        <div style="height: 20px;"></div>
+
+        <section id="response-section">
+            <h2>API Response</h2>
+            <pre id="api-response"></pre>
+        </section>
+    </main>
+</body>
+</html>
